@@ -12,7 +12,10 @@ ollama create dolphin-optimised
 OLLAMA_FLASH_ATTENTION=true OLLAMA_KV_CACHE_TYPE=f16 ollama serve
 
 # Run the optimized model
-ollama run dolphin-optimised:latest
+ollama run --verbose dolphin-optimised:latest
+
+# Or with OpenWebUI (Ensure docker is running)
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
 ## Notes
