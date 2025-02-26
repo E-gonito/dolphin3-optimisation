@@ -17,6 +17,8 @@ ollama run dolphin-optimised:latest
 
 ## Notes
 
+- For more system prompts - [https://github.com/cognitivecomputations/dolphin-system-messages]
+- For parameter settings - [https://github.com/ollama/ollama/blob/main/docs/modelfile.md]
 - Uses Flash Attention for better performance
 - Employs F16 KV cache type
 - Requires Ollama to be installed
