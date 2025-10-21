@@ -1,20 +1,20 @@
-# Finetuning Dolphin 3
+# Optimising Dolphin 3
 
-This guide explains how to create and run an optimized version of the Dolphin 3 model using Ollama.
+This guide explains how to create and run an optimised version of the Dolphin 3 model using Ollama.
 
 ## Setup Commands
 
 ```bash
-# Create optimized model
+# Create optimised model
 ollama create dolphin-optimised
 
-# Run server with optimizations
+# Run server with optimisations
 OLLAMA_FLASH_ATTENTION=true OLLAMA_KV_CACHE_TYPE=f16 ollama serve
 
-# Run the optimized model
+# Run the optimised model
 ollama run --verbose dolphin-optimised:latest
 
-# Or with OpenWebUI (Ensure docker is running)
+# Or with OpenWebUI (Ensure Docker is running)
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
